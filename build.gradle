@@ -21,7 +21,5 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/commons-lang/commons-lang
-    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
 
 }
