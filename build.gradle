@@ -1,0 +1,27 @@
+apply plugin: 'java'
+
+archivesBaseName = "connectfour"
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'connectfour.App'
+
+    }
+
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    } with jar
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/commons-lang/commons-lang
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+
+}

@@ -1,0 +1,10 @@
+.DS_Store
+[Tt]humbs.db
+
+.gradle/
+gradlew*
+
+.idea/
+
+build/
+out/
